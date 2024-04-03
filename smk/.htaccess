@@ -1,0 +1,7 @@
+ErrorDocument 403 /ppdb/errors/error-403.php
+ErrorDocument 404 /ppdb/errors/error-404.php
+ErrorDocument 500 /ppdb/errors/error-500.php
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
